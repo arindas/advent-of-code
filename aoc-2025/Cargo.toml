@@ -10,5 +10,10 @@ name = "aoc_2025"
 path ="src/lib.rs"
 
 [[bin]]
-name = "day_01"
-path = "src/bin/day_01.rs"
+name = "day_01_part_01"
+path = "src/bin/day_01_part_01.rs"
+
+[[bin]]
+name = "day_01_part_02"
+path = "src/bin/day_01_part_02.rs"
+
