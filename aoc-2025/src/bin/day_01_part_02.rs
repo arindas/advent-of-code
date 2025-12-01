@@ -27,23 +27,20 @@ fn main() {
 
         let rotations: i32 = rotations.parse().expect("rotations not a number!");
 
-        let rotations = rotations % NUM_DIAL_ENTRIES;
-
         let delta = match direction {
-            "L" => -rotations,
-            "R" => rotations,
+            "L" => -1,
+            "R" => 1,
             _ => break,
         };
 
-        let new_value = dial_value + delta;
+        for _ in 0..rotations {
+            dial_value += delta;
+            dial_value %= NUM_DIAL_ENTRIES;
 
-        let new_value = new_value % NUM_DIAL_ENTRIES;
-
-        if new_value == 0 {
-            zero_count += 1;
+            if dial_value == 0 {
+                zero_count += 1;
+            }
         }
-
-        dial_value = new_value;
     }
 
     println!("Answer: {zero_count}, read {line_count} lines.");
