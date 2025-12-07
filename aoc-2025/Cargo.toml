@@ -17,3 +17,7 @@ path = "src/bin/day_01_part_01.rs"
 name = "day_01_part_02"
 path = "src/bin/day_01_part_02.rs"
 
+[[bin]]
+name = "day_02_part_01"
+path = "src/bin/day_02_part_01.rs"
+
